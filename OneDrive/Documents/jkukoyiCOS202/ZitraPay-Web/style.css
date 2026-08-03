@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/* =====================================
+   LANDING PAGE
+===================================== */
+
+.landing-body {
+    margin: 0;
+    min-height: 100vh;
+
+    background-color: white;
+
+    font-family: "Poppins", sans-serif;
+}
+
+
+.landing-body * {
+    box-sizing: border-box;
+}
+
+
+/* Main two-column layout */
+
+.landing-page {
+    width: 100%;
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 50% 50%;
+
+    background-color: white;
+
+    overflow: hidden;
+}
+
+
+/* =====================================
+   LEFT SIDE
+===================================== */
+
+.landing-form-side {
+    min-height: 100vh;
+
+    padding: 15px 25px 15px 35px;
+
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+/* Logo */
+
+.landing-logo {
+    width: 65px;
+    height: 75px;
+
+    margin-bottom: 30px;
+}
+
+
+.landing-logo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* Form area */
+
+.landing-content {
+    width: 100%;
+
+    max-width: 405px;
+}
+
+
+/* Heading */
+
+.landing-content h1 {
+    margin: 0 0 27px;
+
+    color: #35383e;
+
+    font-size: 27px;
+
+    font-weight: 600;
+
+    line-height: 1.3;
+}
+
+
+/* Input group */
+
+.landing-input-group {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 19px;
+}
+
+
+/* Label */
+
+.landing-input-group label {
+    margin-bottom: 6px;
+
+    color: #4c5057;
+
+    font-size: 15px;
+
+    font-weight: 400;
+}
+
+
+/* Email and password input */
+
+.landing-input-group input {
+    width: 100%;
+    height: 48px;
+
+    padding: 0 15px;
+
+    border: 1px solid #c9c9c9;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    color: #34373d;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+.landing-input-group input::placeholder {
+    color: #989898;
+}
+
+
+.landing-input-group input:focus {
+    border-color: #60b748;
+}
+
+
+/* Password input and eye */
+
+.landing-password-box {
+    width: 100%;
+
+    position: relative;
+}
+
+
+.landing-password-box input {
+    padding-right: 52px;
+}
+
+
+/* Eye icon button */
+
+.landing-eye-button {
+    position: absolute;
+
+    top: 50%;
+    right: 13px;
+
+    transform: translateY(-50%);
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: #858585;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Forgot password */
+
+.landing-forgot-password {
+    display: inline-block;
+
+    color: #4e963d;
+
+    font-size: 15px;
+
+    text-decoration: none;
+
+    margin-top: -2px;
+
+    margin-bottom: 35px;
+}
+
+
+.landing-forgot-password:hover {
+    text-decoration: underline;
+}
+
+
+/* Login button */
+
+.landing-login-button {
+    width: 100%;
+    height: 50px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background-color: #60b748;
+
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    margin-bottom: 20px;
+
+    transition: background-color 0.2s;
+}
+
+
+.landing-login-button:hover {
+    background-color: #519f3d;
+}
+
+
+/* Sign-up text */
+
+.landing-signup-text {
+    margin: 0;
+
+    color: #34373d;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+
+.landing-signup-text a {
+    color: #4e963d;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    margin-left: 3px;
+}
+
+
+.landing-signup-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================
+   RIGHT IMAGE SPACE
+===================================== */
+
+.landing-image-side {
+    width: 100%;
+
+    min-height: 100vh;
+
+    background-color: white;
+
+    overflow: hidden;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 900px) {
+
+    .landing-page {
+        grid-template-columns: 50% 50%;
+    }
+
+
+    .landing-form-side {
+        padding: 30px;
+    }
+
+
+    .landing-content {
+        max-width: 100%;
+    }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 700px) {
+
+    .landing-page {
+        display: block;
+    }
+
+
+    .landing-form-side {
+        width: 100%;
+
+        min-height: 100vh;
+
+        padding: 30px;
+    }
+
+
+    .landing-content {
+        max-width: 100%;
+    }
+
+
+    /* Hide the empty image area on phones */
+
+    .landing-image-side {
+        display: none;
+    }
+
+}
+.landing-right-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
