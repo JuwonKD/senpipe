@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="/src/style.css" />
     <title>Zitra Pay</title>
   </head>
-  <body class="ml-15 font-poppins">
+  <body class="ml-15 font-poppins ">
     <div class="w-13 h-13 mb-10">
-      <img src="logo.png" alt="Zitra Pay Logo" />
+      <img src="/images/logo.png" alt="Zitra Pay Logo" />
     </div>
-    <h1 class="mb-10 mt-5 text-3xl ">Log In</h1>
-    <section class="flex flex-col gap-1">
+    <main class="grid-cols-2 grid justify-center">
+      <section class="flex flex-col gap-1 ">
+        <h1 class="mb-10 mt-5 text-3xl ">Log In</h1>
+
         <label for="email">Email</label>
         <input class="border border-gray-300 w-110 rounded-md mb-4 py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-500" type="email" id="email" name="email" placeholder="placeholder@mail.com" required />
         
@@ -22,13 +24,17 @@
         <a class="text-green-500 mb-4 hover:text-green-600" href="/forgot-password.html">Forgot your password?</a>
  
         
-        <button class="bg-green-500 hover:bg-green-600 w-110 h-10 mt-7 rounded-md text-white text-sm" type="submit">Log In</button>
+        <button class="bg-green-500 hover:bg-green-600 w-110 h-10 mt-7 rounded-md text-white text-md" type="submit">Log In</button>
 
         <p class="text-sm text-gray-500 ml-35 mt-1">
-            New to Zitra Pay? <a class="text-green-500 hover:text-green-600" href="/signup.html">Sign Up</a>
+          New to Zitra Pay? <a class="text-green-500 hover:text-green-600" href="/signup.html">Sign Up</a>
         </p>
         
-    </section>
+      </section>
+      <section >
+        <img src="images/right side.png" alt="Zitra Pay Illustration" class="w-250 h-200 object-contain" />
+      </section>
+    </main>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
