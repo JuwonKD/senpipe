@@ -8,32 +8,308 @@
     <title>Zitra Pay</title>
   </head>
   <body class="ml-15 mt-0 font-poppins ">
-    <main class="min-h-screen grid-cols-1 grid lg:grid-cols-2 gap-10 px-6 lg:px-16 items-center">
-      <section class="flex flex-col gap-1 ">
-        <div class="w-13 h-13 mb-10">
-          <img src="/images/logo.png" alt="Zitra Pay Logo" />
-        </div>
-        <h1 class="mb-10 mt-5 text-3xl ">Log In</h1>
+    <main
+      class="
+        min-h-screen
+        grid
+        grid-cols-1
+        lg:grid-cols-2
+        items-center
+        gap-8
+        px-6
+        py-10
+        lg:px-16
+        lg:py-0
+    "
+    >
 
-        <label for="email">Email</label>
-        <input class="border border-gray-300 w-110 rounded-md mb-4 py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-500" type="email" id="email" name="email" placeholder="placeholder@mail.com" required />
-        
-        <label for="password">Password</label>
-        <input class="border border-gray-300 w-110 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-green-500" type="password" id="password" name="password" required />
-         
-        <a class="text-green-500 mb-4 hover:text-green-600" href="/forgot-password.html">Forgot your password?</a>
- 
-        
-        <button class="bg-green-500 hover:bg-green-600 w-110 h-10 mt-7 rounded-md text-white text-md" type="submit">Log In</button>
+    <!-- LEFT SIDE -->
 
-        <p class="text-sm text-gray-500 ml-35 mt-1">
-          New to Zitra Pay? <a class="text-green-500 hover:text-green-600" href="/signup.html">Sign Up</a>
-        </p>
-        
+      <section
+        class="
+            flex
+            w-full
+            justify-center
+            lg:justify-start
+        "
+      >
+
+          <div
+            class="
+                w-full
+                max-w-[405px]
+            "
+          >
+
+            <!-- Logo -->
+
+            <img
+                src="/images/logo.png"
+                alt="Zitra Pay Logo"
+                class="
+                    h-auto
+                    w-[60px]
+                    mb-10
+                "
+            >
+
+
+            <!-- Heading -->
+
+            <h1
+                class="
+                    mb-7
+                    text-[28px]
+                    font-semibold
+                    text-[#35383e]
+                "
+            >
+                Log In
+            </h1>
+
+
+            <!-- Form -->
+
+            <form>
+
+                <!-- Email -->
+
+                <div class="mb-5">
+
+                    <label
+                        for="email"
+                        class="
+                            mb-2
+                            block
+                            text-[15px]
+                            text-[#4b4f56]
+                        "
+                    >
+                        Email Address
+                    </label>
+
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="placeholder@mail.com"
+
+                        class="
+                            h-[48px]
+                            w-full
+
+                            rounded-[10px]
+
+                            border
+                            border-[#60B748]
+
+                            bg-white
+
+                            px-4
+
+                            text-[15px]
+
+                            outline-none
+
+                            placeholder:text-gray-400
+
+                            focus:ring-2
+                            focus:ring-[#60B748]/20
+                        "
+                    >
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="mb-2">
+
+                    <label
+                        for="password"
+                        class="
+                            mb-2
+                            block
+                            text-[15px]
+                            text-[#4b4f56]
+                        "
+                    >
+                        Password
+                    </label>
+
+
+                    <div class="relative">
+
+                        <input
+                            type="password"
+                            id="password"
+
+                            class="
+                                h-[48px]
+                                w-full
+
+                                rounded-[10px]
+
+                                border
+                                border-gray-300
+
+                                bg-white
+
+                                px-4
+                                pr-12
+
+                                outline-none
+
+                                focus:border-[#60B748]
+
+                                focus:ring-2
+                                focus:ring-[#60B748]/20
+                            "
+                        >
+
+
+                        <!-- Password eye -->
+
+                        <button
+                            type="button"
+                            id="toggle-password"
+
+                            class="
+                                absolute
+
+                                right-3
+
+                                top-1/2
+
+                                -translate-y-1/2
+
+                                text-gray-400
+                            "
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Forgot password -->
+
+                <a
+                    href="/forgot-password.html"
+
+                    class="
+                        mb-9
+
+                        inline-block
+
+                        text-[15px]
+
+                        text-[#4E963D]
+
+                        hover:underline
+                    "
+                >
+                    Forgot your password?
+                </a>
+
+
+                <!-- Login button -->
+            
+                <button
+                    type="submit"
+                    id="loginBtn"
+                    class="
+                        h-[50px]
+                        w-full
+
+                        rounded-[12px]
+
+                        bg-[#60B748]
+
+                        text-[15px]
+
+                        font-semibold
+
+                        text-white
+
+                        transition
+
+                        hover:bg-[#519F3D]
+                    "
+                >
+                  Login
+                </button>
+              
+
+                <!-- Sign up -->
+
+                <p
+                    class="
+                        mt-5
+
+                        text-center
+
+                        text-[13px]
+
+                        text-[#35383e]
+                    "
+                >
+
+                    New to ZitraPay?
+
+                    <a
+                        href="/signup.html"
+
+                        class="
+                            ml-1
+
+                            text-[#4E963D]
+
+                            hover:underline
+                        "
+                    >
+                        Sign up
+                    </a>
+
+                </p>
+
+            </form>
+
+          </div>
+
+    </section>
+
+
+    <!-- RIGHT SIDE -->
+
+    <section
+        class="
+            flex
+            w-full
+            items-center
+            justify-center
+        "
+    >
+
+        <img
+            src="/images/right side.png"
+            alt="Zitra Pay Illustration"
+
+            class="
+                h-auto
+                w-full
+                max-w-[650px]
+
+                rounded-2xl
+
+                object-contain
+            "
+        >
+
       </section>
-      <section >
-        <img src="images/right side.png" alt="Zitra Pay Illustration" class="w-250 h-200 object-contain" />
-      </section>
+
     </main>
     <script type="module" src="/src/main.js"></script>
   </body>

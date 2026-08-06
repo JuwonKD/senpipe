@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/output.css">
+    <title>Login Page</title>
+</head>
+<body class="font-poppins">
+    <main
+        class="
+            min-h-screen
+            grid
+            grid-cols-1
+            lg:grid-cols-2
+            items-center
+            justify-center
+            gap-8
+            px-6
+            py-10
+            lg:px-16
+            lg:py-0
+        "
+    >
+        <section>
+            <div>
+                <img src="/images/logo.png" alt="ZitraPay Logo" class="w-[60px] h-auto mb-10 ">
+            </div>
+            <h1 class="mb-2
+                    text-[28px]
+                    font-semibold
+                    text-[#35383e]">Enter OTP</h1>
+            <p class="mb-10">
+                Please provide the OTP sent to this email address <u>kenneth.irechukwu@gmail.com</u>
+            </p>
+            <div class="flex justify-between gap-2 mt-4">
+               <input type="text" maxlength="1" class="w-[50px] h-[50px] border border-gray-300 outline-none
+             focus:border-[#60B748] rounded-[12px] text-center ">
+
+               <input type="text" maxlength="1" class="w-[50px] h-[50px] border border-gray-300 outline-none
+             focus:border-[#60B748] rounded-[12px] text-center ">
+
+               <input type="text" maxlength="1" class="w-[50px] h-[50px] border border-gray-300 outline-none
+             focus:border-[#60B748] rounded-[12px] text-center ">
+
+               <input type="text" maxlength="1" class="w-[50px] h-[50px] border border-gray-300 outline-none
+             focus:border-[#60B748] rounded-[12px] text-center ">
+
+               <input type="text" maxlength="1" class="w-[50px] h-[50px] border border-gray-300 outline-none
+             focus:border-[#60B748] rounded-[12px] text-center ">
+
+               <input type="text" maxlength="1" class="w-[50px] h-[50px] border border-gray-300 outline-none
+             focus:border-[#60B748] rounded-[12px] text-center ">
+      
+            </div>
+            <p class="mt-4">Didn't get the OTP? <a href="/resend-otp.html" class="text-[#60B748] hover:underline">Resend in 49s</a></p>
+            <button type="submit" class="h-[50px] w-full bg-[#60B748] text-white rounded-[12px] mt-10">Continue</button>
+            <p class="mt-4 text-center text-[#35383e]">
+                New to ZitraPay? <a href="/signup.html" class="text-[#60B748] hover:underline">Sign Up</a>
+            </p>
+        </section>
+
+        <section class=" lg:flex justify-center items-center w-full">
+            <img src="/images/right side.png" alt="Login Illustration" class="w-full object-contain max-w-[650px] rounded-2xl h-auto">
+        </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
