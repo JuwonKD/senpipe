@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZitraPay - Create your PIN</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: '#60B748',
+              'brand-hover': '#519F3D',
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="min-h-screen bg-white font-sans text-[#35383e] antialiased flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="w-full border-b border-gray-100 px-8 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img
+          src="/images/logo.png"
+          alt="ZitraPay Logo"
+          class="h-8 w-auto object-contain"
+        />
+      </div>
+
+      <!-- Login Nav Link -->
+      <div class="flex items-center space-x-3 text-sm">
+        <span class="text-gray-600 font-normal">Have an account?</span>
+        <a
+          href="/login.html"
+          class="rounded-full border border-brand px-5 py-1.5 font-medium text-brand hover:bg-brand hover:text-white transition-colors duration-200"
+        >
+          Login
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="w-full max-w-4xl mx-auto px-6 py-6 flex-1 flex flex-col items-center">
+      
+      <!-- Progress Bar -->
+      <div class="w-full max-w-3xl bg-gray-100 h-2.5 rounded-full mb-8 overflow-hidden">
+        <div class="bg-amber-500 h-full w-full rounded-full"></div>
+      </div>
+
+      <!-- Form Section Container -->
+      <div class="w-full max-w-[460px] mx-auto">
+        
+        <!-- Back Button -->
+        <a href="/set-password.html" class="inline-flex items-center text-sm font-medium text-brand hover:text-brand-hover mb-6 transition-colors">
+          <svg class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back
+        </a>
+
+        <!-- Form Title & Description -->
+        <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+          Create your PIN
+        </h1>
+        <p class="text-sm text-gray-600 mb-8 leading-relaxed">
+          This PIN is to be used to authorize transactions.
+        </p>
+
+        <!-- PIN Form -->
+        <form onsubmit="event.preventDefault();" class="space-y-6">
+          
+          <!-- Enter PIN Section -->
+          <div>
+            <label class="block text-xs font-medium text-gray-700 mb-2">
+              Enter PIN
+            </label>
+            <div class="flex items-center space-x-3">
+              <div class="flex items-center space-x-2.5">
+                <input
+                  type="password"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  maxlength="1"
+                  data-pin-group="pin"
+                  class="pin-input w-12 h-12 text-center text-xl font-bold rounded-xl border border-gray-200 bg-white text-gray-900 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all"
+                />
+                <input
+                  type="password"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  maxlength="1"
+                  data-pin-group="pin"
+                  class="pin-input w-12 h-12 text-center text-xl font-bold rounded-xl border border-gray-200 bg-white text-gray-900 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all"
+                />
+                <input
+                  type="password"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  maxlength="1"
+                  data-pin-group="pin"
+                  class="pin-input w-12 h-12 text-center text-xl font-bold rounded-xl border border-gray-200 bg-white text-gray-900 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all"
+                />
+                <input
+                  type="password"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  maxlength="1"
+                  data-pin-group="pin"
+                  class="pin-input w-12 h-12 text-center text-xl font-bold rounded-xl border border-gray-200 bg-white text-gray-900 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all"
+                />
+              </div>
+
+              <!-- Eye Toggle Button (Enter PIN) -->
+              <button
+                type="button"
+                onclick="togglePinVisibility('pin', this)"
+                class="p-2 text-gray-400 hover:text-gray-600 focus:outline-none"
+              >
+                <!-- Eye-closed SVG (default) -->
+                <svg class="w-5 h-5 eye-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.875 18.825A10.05 10.05 0 0112 19c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24M1 1l22 22" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Confirm PIN Section -->
+          <div>
+            <label class="block text-xs font-medium text-gray-700 mb-2">
+              Confirm PIN
+            </label>
+            <div class="flex items-center space-x-3">
+              <div class="flex items-center space-x-2.5">
+                <input
+                  type="password"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  maxlength="1"
+                  data-pin-group="confirm"
+                  class="pin-input w-12 h-12 text-center text-xl font-bold rounded-xl border border-gray-200 bg-white text-gray-900 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all"
+                />
+                <input
+                  type="password"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  maxlength="1"
+                  data-pin-group="confirm"
+                  class="pin-input w-12 h-12 text-center text-xl font-bold rounded-xl border border-gray-200 bg-white text-gray-900 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all"
+                />
+                <input
+                  type="password"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  maxlength="1"
+                  data-pin-group="confirm"
+                  class="pin-input w-12 h-12 text-center text-xl font-bold rounded-xl border border-gray-200 bg-white text-gray-900 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all"
+                />
+                <input
+                  type="password"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  maxlength="1"
+                  data-pin-group="confirm"
+                  class="pin-input w-12 h-12 text-center text-xl font-bold rounded-xl border border-gray-200 bg-white text-gray-900 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all"
+                />
+              </div>
+
+              <!-- Eye Toggle Button (Confirm PIN) -->
+              <button
+                type="button"
+                onclick="togglePinVisibility('confirm', this)"
+                class="p-2 text-gray-400 hover:text-gray-600 focus:outline-none"
+              >
+                <!-- Eye-closed SVG (default) -->
+                <svg class="w-5 h-5 eye-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.875 18.825A10.05 10.05 0 0112 19c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24M1 1l22 22" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Continue Button -->
+          <button
+            type="submit"
+            onclick="window.location.href='/almost-there.html'"
+            class="w-full h-12 mt-6 rounded-xl bg-brand text-sm font-semibold text-white shadow-sm transition-all hover:bg-brand-hover focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 active:scale-[0.99]"
+          >
+            Continue
+          </button>
+
+        </form>
+
+      </div>
+
+    </main>
+
+    <!-- JavaScript for Input Focus Navigation & Visibility Toggle -->
+    <script>
+      // Auto-advance and backspace logic across PIN boxes
+      document.querySelectorAll('.pin-input').forEach((input) => {
+        input.addEventListener('input', (e) => {
+          const value = e.target.value;
+          if (value && e.target.nextElementSibling && e.target.nextElementSibling.classList.contains('pin-input')) {
+            e.target.nextElementSibling.focus();
+          }
+        });
+
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Backspace' && !e.target.value && e.target.previousElementSibling) {
+            e.target.previousElementSibling.focus();
+          }
+        });
+      });
+
+      // Toggle PIN visibility (Masked vs Visible Text)
+      function togglePinVisibility(group, btn) {
+        const inputs = document.querySelectorAll(`input[data-pin-group="${group}"]`);
+        const isHidden = inputs[0].type === 'password';
+        
+        inputs.forEach(input => {
+          input.type = isHidden ? 'text' : 'password';
+        });
+
+        // Swap Eye Icon SVG
+        btn.querySelector('.eye-icon').outerHTML = isHidden
+          ? `<svg class="w-5 h-5 eye-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>`
+          : `<svg class="w-5 h-5 eye-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.875 18.825A10.05 10.05 0 0112 19c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24M1 1l22 22" /></svg>`;
+      }
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZitraPay - Email Verification</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: '#60B748',
+              'brand-hover': '#519F3D',
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="min-h-screen bg-white font-sans text-[#35383e] antialiased flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="w-full border-b border-gray-100 px-8 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img
+          src="/images/logo.png"
+          alt="ZitraPay Logo"
+          class="h-8 w-auto object-contain"
+        />
+      </div>
+
+      <!-- Login Nav Link -->
+      <div class="flex items-center space-x-3 text-sm">
+        <span class="text-gray-600 font-normal">Have an account?</span>
+        <a
+          href="/login.html"
+          class="rounded-full border border-brand px-5 py-1.5 font-medium text-brand hover:bg-brand hover:text-white transition-colors duration-200"
+        >
+          Login
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="w-full max-w-4xl mx-auto px-6 py-6 flex-1 flex flex-col items-center">
+      
+      <!-- Progress Bar (75%) -->
+      <div class="w-full max-w-3xl bg-gray-100 h-2.5 rounded-full mb-8 overflow-hidden">
+        <div class="bg-amber-500 h-full w-3/4 rounded-full"></div>
+      </div>
+
+      <!-- Form Section Container -->
+      <div class="w-full max-w-[460px] mx-auto">
+        
+        <!-- Back Button -->
+        <a href="/signup.html" class="inline-flex items-center text-sm font-medium text-brand hover:text-brand-hover mb-6 transition-colors">
+          <svg class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back
+        </a>
+
+        <!-- Form Title & Description -->
+        <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+          Email Verification
+        </h1>
+        <p class="text-sm text-gray-600 mb-8 leading-relaxed">
+          Please provide the OTP sent to this email address 
+          <a href="mailto:kenneth.irechukwu@gmail.com" class="text-gray-900 font-medium underline">kenneth.irechukwu@gmail.com</a>
+        </p>
+
+        <!-- OTP Verification Form -->
+        <form onsubmit="event.preventDefault();" class="space-y-6">
+          
+          <!-- 6-Digit OTP Box Grid -->
+          <div class="flex items-center justify-between gap-2 sm:gap-3">
+            <input
+              type="text"
+              maxlength="1"
+              autofocus
+              class="w-12 h-12 sm:w-14 sm:h-14 text-center text-xl font-semibold rounded-xl border border-brand bg-white text-gray-900 outline-none focus:ring-2 focus:ring-brand/20 transition-all"
+            />
+            <input
+              type="text"
+              maxlength="1"
+              class="w-12 h-12 sm:w-14 sm:h-14 text-center text-xl font-semibold rounded-xl border border-gray-200 bg-white text-gray-900 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all"
+            />
+            <input
+              type="text"
+              maxlength="1"
+              class="w-12 h-12 sm:w-14 sm:h-14 text-center text-xl font-semibold rounded-xl border border-gray-200 bg-white text-gray-900 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all"
+            />
+            <input
+              type="text"
+              maxlength="1"
+              class="w-12 h-12 sm:w-14 sm:h-14 text-center text-xl font-semibold rounded-xl border border-gray-200 bg-white text-gray-900 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all"
+            />
+            <input
+              type="text"
+              maxlength="1"
+              class="w-12 h-12 sm:w-14 sm:h-14 text-center text-xl font-semibold rounded-xl border border-gray-200 bg-white text-gray-900 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all"
+            />
+            <input
+              type="text"
+              maxlength="1"
+              class="w-12 h-12 sm:w-14 sm:h-14 text-center text-xl font-semibold rounded-xl border border-gray-200 bg-white text-gray-900 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20 transition-all"
+            />
+          </div>
+
+          <!-- Resend Timer -->
+          <div class="text-xs sm:text-sm">
+            <span class="text-gray-900 font-medium">Didn't get the OTP? </span>
+            <span class="text-brand font-medium">Resend in 49s</span>
+          </div>
+
+          <!-- Continue Button -->
+          <button
+            type="submit"
+            onclick="window.location.href='/set-password.html'"
+            class="w-full h-12 mt-4 rounded-xl bg-brand text-sm font-semibold text-white shadow-sm transition-all hover:bg-brand-hover focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 active:scale-[0.99]"
+          >
+            Continue
+          </button>
+
+        </form>
+
+      </div>
+
+    </main>
+
+  </body>
+</html>

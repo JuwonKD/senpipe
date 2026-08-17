@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/output.css" />
+    <title>Zitra Pay - Log In</title>
+  </head>
+  <body class="m-0 bg-[#f4f7f4] font-poppins text-[#35383e] antialiased overflow-x-hidden">
+    <main class="relative min-h-screen w-full grid grid-cols-1 lg:grid-cols-12 items-center">
+      
+      <!-- LEFT SECTION: Login Form -->
+      <section class="relative z-10 lg:col-span-5 flex min-h-screen w-full flex-col justify-center p-6 sm:p-10 lg:pl-16 lg:pr-8 bg-[#f4f7f4]">
+        
+        <!-- Top Decor Wave Background Layer -->
+        <div class="absolute top-0 left-0 -z-10 h-72 w-72 rounded-br-full bg-stone-100/80 blur-2xl pointer-events-none"></div>
+
+        <!-- Form & Logo Container (Aligned together) -->
+        <div class="w-full max-w-[390px] mx-auto rounded-2xl bg-white backdrop-blur-sm p-6 sm:p-8 shadow-sm border border-emerald-100/60">
+          
+          <!-- Logo inside container for strict alignment -->
+          <div class="mb-8">
+            <img
+              src="/images/logo.png"
+              alt="Zitra Pay Logo"
+              class="h-auto w-[50px] object-contain"
+            />
+          </div>
+
+          <h1 class="mb-6 text-[28px] font-bold text-[#1f2421]">
+            Log In
+          </h1>
+
+          <form onsubmit="event.preventDefault();" class="space-y-4">
+            
+            <!-- Email Field -->
+            <div>
+              <label for="email" class="mb-1.5 block text-[13px] font-medium text-slate-600">
+                Email Address
+              </label>
+              <div class="relative rounded-xl shadow-xs">
+                <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-emerald-800/60">
+                  <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="placeholder@mail.com"
+                  class="h-[46px] w-full rounded-xl border border-emerald-200/80 bg-white/90 pl-10 pr-4 text-[13px] text-slate-800 placeholder:text-slate-400 outline-none transition-all focus:border-[#52ad37] focus:ring-2 focus:ring-[#52ad37]/20"
+                />
+              </div>
+            </div>
+
+            <!-- Password Field -->
+            <div>
+              <label for="password" class="mb-1.5 block text-[13px] font-medium text-slate-600">
+                Password
+              </label>
+              <div class="relative rounded-xl shadow-xs">
+                <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-emerald-800/60">
+                  <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                </div>
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="••••••••"
+                  class="h-[46px] w-full rounded-xl border border-emerald-200/80 bg-white/90 pl-10 pr-10 text-[13px] text-slate-800 placeholder:text-slate-400 outline-none transition-all focus:border-[#52ad37] focus:ring-2 focus:ring-[#52ad37]/20"
+                />
+                <button
+                  type="button"
+                  id="toggle-password"
+                  class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
+                >
+                  <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858-5.908a10.007 10.007 0 013.98-.863c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21M3 3l18 18" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Forgot Password -->
+            <div class="flex justify-start">
+              <a href="/forgot-password.html" class="text-[13px] font-medium text-[#4E963D] hover:underline">
+                Forgot your password?
+              </a>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="h-[48px] w-full rounded-xl bg-[#52ad37] text-[14px] font-semibold text-white shadow-md shadow-[#52ad37]/30 transition-all hover:bg-[#459a2d] active:scale-[0.99]"
+            >
+              Login
+            </button>
+
+            <!-- Signup Link -->
+            <p class="mt-4 text-center text-[13px] text-slate-600">
+              New to ZitraPay?
+              <a href="/signup.html" class="font-semibold text-[#4E963D] hover:underline">
+                Sign up
+              </a>
+            </p>
+
+          </form>
+        </div>
+
+      </section>
+
+      <!-- RIGHT SECTION: Curved Hero Panel -->
+      <section class="relative lg:col-span-7 hidden lg:flex min-h-screen w-full items-center justify-center overflow-hidden p-6">
+        
+        <div class="relative h-full min-h-[92vh] w-full overflow-hidden rounded-l-[60px] bg-[#02180a] shadow-2xl">
+          
+          <img
+            src="/images/gemini-svg.svg"
+            alt="Zitra Pay Modern Hero Graphic"
+            class="absolute inset-0 h-full w-full object-cover object-center"
+          />
+
+          <!-- Glassmorphism Card Overlay -->
+          
+
+        </div>
+      </section>
+
+    </main>
+
+    <script src="/src/main.js"></script>
+  </body>
+</html>

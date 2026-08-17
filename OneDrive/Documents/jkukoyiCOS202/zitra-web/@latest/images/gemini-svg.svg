@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#02180a"/>
+      <stop offset="50%" stop-color="#073b18"/>
+      <stop offset="100%" stop-color="#010f06"/>
+    </linearGradient>
+
+    <!-- Emerald Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="25" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Glassmorphism Blur -->
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="800" height="1000" fill="url(#bgGlow)"/>
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="200" cy="300" r="250" fill="#22c55e" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="600" cy="700" r="200" fill="#10b981" opacity="0.12" filter="url(#glow)"/>
+
+  <!-- Abstract Grid/Tech Lines -->
+  <path d="M 0 200 Q 400 150 800 300 M 0 400 Q 400 350 800 500 M 0 600 Q 400 550 800 700" stroke="#4ade80" stroke-opacity="0.15" stroke-width="2" fill="none"/>
+
+  <!-- Floating Currency Coins (Naira & Dollar) -->
+  <!-- Naira Coin -->
+  <g transform="translate(180, 520)">
+    <circle cx="0" cy="0" r="45" fill="#15803d" stroke="#86efac" stroke-width="3" filter="url(#glow)"/>
+    <text x="0" y="12" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#ffffff" text-anchor="middle">₦</text>
+  </g>
+
+  <!-- Dollar Coin 1 -->
+  <g transform="translate(680, 480)">
+    <circle cx="0" cy="0" r="40" fill="#16a34a" stroke="#bbf7d0" stroke-width="3" filter="url(#glow)"/>
+    <text x="0" y="12" font-family="Arial, sans-serif" font-size="34" font-weight="bold" fill="#ffffff" text-anchor="middle">$</text>
+  </g>
+
+  <!-- Dollar Coin 2 -->
+  <g transform="translate(720, 560)">
+    <circle cx="0" cy="0" r="32" fill="#14532d" stroke="#86efac" stroke-width="2"/>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">$</text>
+  </g>
+
+  <!-- Glassmorphism Card Center Container -->
+  <rect x="180" y="280" width="440" height="440" rx="28" fill="url(#glassGrad)" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <!-- Card Decor Markers -->
+  <text x="210" y="325" font-family="Arial, sans-serif" font-size="24" fill="#86efac" opacity="0.8">+</text>
+  <text x="580" y="685" font-family="Arial, sans-serif" font-size="24" fill="#86efac" opacity="0.8">+</text>
+
+  <!-- Headline Text -->
+  <text x="220" y="410" font-family="System-UI, sans-serif" font-size="28" font-weight="bold" fill="#ffffff">
+    <tspan x="220" dy="0">Powering African</tspan>
+    <tspan x="220" dy="38">businesses to trade</tspan>
+    <tspan x="220" dy="38">globally</tspan>
+  </text>
+
+  <!-- Subtitle Text -->
+  <text x="220" y="540" font-family="System-UI, sans-serif" font-size="13" fill="#dcfce7" opacity="0.85">
+    <tspan x="220" dy="0">A compliance-first FX and payments platform</tspan>
+    <tspan x="220" dy="20">built for African businesses operating globally.</tspan>
+  </text>
+</svg>

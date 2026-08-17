@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZitraPay - Account Type</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: '#60B748',
+              'brand-hover': '#519F3D',
+              'card-bg': '#f6faf5',
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="min-h-screen bg-white font-poppins text-[#35383e] antialiased flex flex-col justify-between">
+
+    <!-- Header Navigation -->
+    <header class="w-full border-b border-gray-100 px-8 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img
+          src="/images/logo.png"
+          alt="ZitraPay Logo"
+          class="h-8 w-auto object-contain"
+        />
+      </div>
+
+      <!-- Login Nav Link -->
+      <div class="flex items-center space-x-3 text-sm">
+        <span class="text-gray-600 font-normal">Have an account?</span>
+        <a
+          href="/login.html"
+          class="rounded-full border border-brand px-5 py-1.5 font-medium text-brand hover:bg-brand hover:text-white transition-colors duration-200"
+        >
+          Login
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="w-full max-w-4xl mx-auto px-6 py-8 flex-1 flex flex-col items-center">
+      
+      <!-- Progress Bar -->
+      <div class="w-full max-w-3xl bg-gray-100 h-2.5 rounded-full mb-12 overflow-hidden">
+        <div class="bg-amber-500 h-full w-1/4 rounded-full"></div>
+      </div>
+
+      <!-- Section Title & Subtitle -->
+      <div class="text-center mb-10">
+        <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+          What type of account would you like to create?
+        </h1>
+        <p class="text-sm text-gray-500">
+          Please select an option below
+        </p>
+      </div>
+
+      <!-- Account Selection Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
+        
+        <!-- Individual Account Option -->
+        <button
+          type="button"
+          onclick="window.location.href='/individual-acc.html'"
+          class="group flex flex-col items-center text-center bg-card-bg border border-emerald-100 hover:border-brand rounded-2xl p-8 transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand/30"
+        >
+          <!-- House / User Icon -->
+          <div class="mb-6 text-brand">
+            <svg class="w-16 h-16 fill-current" viewBox="0 0 64 64">
+              <path d="M32 8L8 28v28h48V28L32 8zm0 18a8 8 0 110 16 8 8 0 010-16z"/>
+            </svg>
+          </div>
+
+          <h2 class="text-lg font-bold text-gray-800 mb-2">
+            Individual Account
+          </h2>
+          <p class="text-xs text-gray-500 leading-relaxed max-w-[200px]">
+            Receive, spend and send money globally
+          </p>
+        </button>
+
+        <!-- Business Account Option -->
+        <button
+          type="button"
+          onclick="window.location.href='/business-acc.html'"
+          class="group flex flex-col items-center text-center bg-card-bg border border-emerald-100 hover:border-brand rounded-2xl p-8 transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand/30"
+        >
+          <!-- Briefcase / Bank Icon -->
+          <div class="mb-6 text-brand">
+            <svg class="w-16 h-16 fill-current" viewBox="0 0 64 64">
+              <path d="M20 16V10a2 2 0 012-2h20a2 2 0 012 2v6h12a2 2 0 012 2v34a2 2 0 01-2 2H8a2 2 0 01-2-2V18a2 2 0 012-2h12zm4-4v4h16v-4H24z"/>
+            </svg>
+          </div>
+
+          <h2 class="text-lg font-bold text-gray-800 mb-2">
+            Business Account
+          </h2>
+          <p class="text-xs text-gray-500 leading-relaxed max-w-[200px]">
+            Move money or do business globally,
+          </p>
+        </button>
+
+      </div>
+
+    </main>
+
+  </body>
+</html>
