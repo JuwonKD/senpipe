@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZitraPay - Create Wallet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: '#60B748',
+              'brand-hover': '#519F3D',
+              'brand-dark': '#1B3A1F',
+              'brand-darker': '#12290F',
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="min-h-screen bg-white font-sans text-[#35383e] antialiased">
+
+    <!-- Header -->
+    <header class="w-full px-6 sm:px-8 py-4 flex items-center justify-between">
+      <img src="/images/logo.png" alt="ZitraPay Logo" class="h-8 w-auto object-contain" />
+      <div class="text-sm">
+        <span class="text-gray-900 font-medium">Confirm your details</span>
+        <span class="text-amber-500 font-semibold ml-1">1/2</span>
+      </div>
+    </header>
+
+    <!-- Progress bar (2 segments) -->
+    <div class="w-full flex gap-1.5 px-0">
+      <div class="h-1.5 flex-1 bg-amber-500"></div>
+      <div class="h-1.5 flex-1 bg-gray-100"></div>
+    </div>
+
+    <!-- Content -->
+    <main class="max-w-md mx-auto px-6 pt-10">
+
+      <!-- Back -->
+      <a href="/wallets.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:text-brand-hover transition-colors mb-6">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back
+      </a>
+
+      <!-- Title & description -->
+      <h1 class="text-xl font-bold text-gray-900 mb-2">Confirm your details</h1>
+      <p class="text-sm text-gray-500 leading-relaxed mb-8">
+        Please confirm that the details below are correct before proceeding to creating your Zitra Wallet.
+      </p>
+
+      <form onsubmit="event.preventDefault();" class="space-y-5">
+
+        <!-- First / Last Name -->
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 mb-1.5">First Name</label>
+            <input
+              type="text"
+              value="Kenneth"
+              readonly
+              class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3.5 py-2.5 text-sm text-gray-900 outline-none cursor-default"
+            />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 mb-1.5">Last Name</label>
+            <input
+              type="text"
+              value="Irechukwu"
+              readonly
+              class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3.5 py-2.5 text-sm text-gray-900 outline-none cursor-default"
+            />
+          </div>
+        </div>
+
+        <!-- Email Address -->
+        <div>
+          <label class="block text-xs font-semibold text-gray-700 mb-1.5">Email Address</label>
+          <input
+            type="email"
+            value="kenneth.irechukwu@gmail.com"
+            readonly
+            class="w-full rounded-lg border border-gray-200 bg-gray-50 px-3.5 py-2.5 text-sm text-gray-900 outline-none cursor-default"
+          />
+        </div>
+
+        <!-- Continue -->
+        <button
+          type="submit"
+          onclick="window.location.href='/create-wallet-step2.html'"
+          class="w-full h-12 mt-2 rounded-xl bg-brand text-sm font-semibold text-white shadow-sm transition-all hover:bg-brand-hover focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 active:scale-[0.99]"
+        >
+          Yes, it is correct
+        </button>
+
+      </form>
+    </main>
+
+  </body>
+</html>
